@@ -20,4 +20,26 @@
     return [[NSNumber alloc] initWithInt:currentLargest];
     
 }
++(NSNumber*) smallestNumber:(NSArray *)array{
+    int currentSmallest = [array[0] intValue];
+    for (NSNumber * num in array) {
+        if([num intValue] < currentSmallest){
+            currentSmallest = [num intValue];
+        }
+    }
+    
+    return [[NSNumber alloc] initWithInt:currentSmallest];
+    
+}
++(NSNumber*) findAverage:(NSArray *)array{
+    int total = 0;
+    int count = 0;
+    for (NSNumber * num in array) {
+        total += [num intValue];
+        count++;
+    }
+    
+    return [[NSNumber alloc] initWithInt:(total/count)];
+    
+}
 @end

@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ArrayUtility : NSObject
 
 +(NSNumber*) largestNumber:(NSArray*) array;
++(NSNumber*) smallestNumber:(NSArray*) array;
++(NSNumber*) findAverage:(NSArray*) array;
 
 //
 @end

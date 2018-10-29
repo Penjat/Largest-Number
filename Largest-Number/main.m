@@ -17,6 +17,8 @@ int main(int argc, const char * argv[]) {
         
         //NSLog(@"the largest number is %@",[ArrayUtility largestNumber:testArray]);
         NSLog(@"the largest number is %@", [ArrayUtility largestNumber:testArray] );
+        NSLog(@"the smallest number is %@", [ArrayUtility smallestNumber:testArray] );
+        NSLog(@"the average of the numbers is %@", [ArrayUtility findAverage:testArray] );
         
     }
     return 0;

@@ -8,10 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
+NSObject* largestNumber(NSArray * array){
+    
+    NSObject * currentLargest = array[0];
+    for (NSObject * num in array) {
+        if(num > currentLargest){
+            currentLargest = num;
+        }
+    }
+    
+    return currentLargest;
+}
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSArray * testArray = @[@4,@5,@27,@33,@2];
+        
+        NSLog(@"current largest is %@",largestNumber(testArray));
+        
+        
     }
     return 0;
 }

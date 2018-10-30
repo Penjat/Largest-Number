@@ -15,9 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSNumber*) largestNumber:(NSArray*) array;
 +(NSNumber*) smallestNumber:(NSArray*) array;
 +(NSNumber*) findAverage:(NSArray*) array;
-+(NSNumber*) findMedian:(NSArray*) array;
-+(NSMutableArray*) sortArray:(NSArray*) array;
-
++(NSNumber*) findMedian:(NSArray*)array;
++(NSNumber*) findMedianSorted:(NSArray*)array;
++(NSArray*) sortArray:(NSArray*) array;
++(BOOL) isArraySorted:(NSArray*) array;
 
 //
 @end

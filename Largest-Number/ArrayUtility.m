@@ -43,14 +43,28 @@
     
 }
 +(NSNumber*) findMedian:(NSArray *)array{
+    //check if sorted
+    //if sorted
+    if([ArrayUtility isArraySorted:array]==1){
+        return [ArrayUtility findMedianSorted:array];
+    }
+    //if not sorted
+    //sort the array before finding the median
+    
+    return [ArrayUtility findMedianSorted:[ArrayUtility sortArray:array]];
+}
++(NSNumber*) findMedianSorted:(NSArray *)array{
     //this needs to be for a sorted array
+    
+    
     long int count = [array count];
     NSNumber * median;
     //if it is odd
     if((count % 2) == 1){
         //return the middle number, half of count
         long int middleIndex = (count/2);
-        median = [[NSNumber alloc] initWithInt:[array[middleIndex] integerValue]];
+        median = [[NSNumber alloc]
+                  initWithInteger:[array[middleIndex] integerValue]];
         
     }else{
         //if it is even
@@ -59,14 +73,14 @@
         long int middle2 = (count/2);
         
         long int returnValue = ([array[middle1] integerValue] + [array[middle2] integerValue])/2;
-        median = [[NSNumber alloc] initWithInt:returnValue];
+        median = [[NSNumber alloc] initWithInteger:returnValue];
         
     }
     
     return median;
     
 }
-+ (NSMutableArray *)sortArray:(NSArray *)array{
++ (NSArray *)sortArray:(NSArray *)array{
     //insertion sort
     
     NSMutableArray * muArray = [[NSMutableArray alloc]initWithArray:array];
@@ -81,6 +95,23 @@
         }
         muArray[j+1] = [[NSNumber alloc] initWithInt:currentVal];
     }
-    return muArray;
+    array = [muArray copy];
+    return array;
+}
++ (BOOL)isArraySorted:(NSArray *)array{
+    //returns YES for sorted, NO for unsorted
+    int i =0;
+    for (NSNumber * num in array) {
+        //if is at the end
+        if(i+1 >= array.count){
+            return YES;
+        }
+        if([num intValue] > [array[i+1] intValue] ){
+            return NO;
+        }
+        
+        i++;
+    }
+    return YES;
 }
 @end

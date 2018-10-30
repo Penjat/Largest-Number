@@ -20,6 +20,11 @@ int main(int argc, const char * argv[]) {
         NSLog(@"the smallest number is %@", [ArrayUtility smallestNumber:testArray] );
         NSLog(@"the average of the numbers is %@", [ArrayUtility findAverage:testArray] );
         
+        NSMutableArray  * sortedArray = [ArrayUtility sortArray:testArray];
+        
+        for (NSNumber * num in sortedArray) {
+            NSLog(@"%@",num);
+        }
     }
     return 0;
 }

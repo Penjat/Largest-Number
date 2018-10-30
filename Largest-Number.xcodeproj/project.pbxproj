@@ -45,7 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				B10434922187698C00438457 /* Largest-Number */,
-				B10434912187698C00438457 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +54,7 @@
 				B10434902187698C00438457 /* Largest-Number */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		B10434922187698C00438457 /* Largest-Number */ = {
@@ -63,6 +63,7 @@
 				B10434B321878F2800438457 /* ArrayUtility.h */,
 				B10434B421878F2800438457 /* ArrayUtility.m */,
 				B10434932187698C00438457 /* main.m */,
+				B10434912187698C00438457 /* Products */,
 			);
 			path = "Largest-Number";
 			sourceTree = "<group>";
